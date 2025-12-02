@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меркурий: Күнге Жақын Планета Анализі</title>
+    <!-- Подключение Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Настройка шрифтов и цветов (Меркурий стилі) -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'black-void': '#000000',
+                        'mercury-primary': '#a1a1aa', // Сұр-қоңыр (Stone/Gray 400)
+                        'mercury-accent': '#e5e7eb', // Ашық күміс (Gray 200)
+                        'dark-slate': '#0f172a',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['Consolas', 'Monaco', 'monospace'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Полностью черный фон для "космического" вида */
+        body {
+            background-color: #000000;
+            color: #e2e8f0;
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Эффект свечения для заголовков и карточек (Меркурий киберпанк стиль) */
+        .neon-glow {
+            text-shadow: 0 0 5px #e5e7eb, 0 0 10px #e5e7eb; /* Ақшыл күміс свечение */
+            transition: all 0.3s;
+        }
+        
+        .card-border {
+            border: 1px solid rgba(229, 231, 235, 0.3); /* Легкая рамка (Күміс) */
+            box-shadow: 0 0 15px rgba(229, 231, 235, 0.4); /* Неоновое свечение */
+        }
+        
+        .card-border:hover {
+            box-shadow: 0 0 25px rgba(229, 231, 235, 0.7), 0 0 40px rgba(229, 231, 235, 0.5);
+            transform: translateY(-2px);
+        }
+        
+        /* Список фактов */
+        .fact-item {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        .fact-item::before {
+            content: ">>"; /* Футуристический маркер */
+            color: #a1a1aa; /* Сұр-қоңыр маркер */
+            position: absolute;
+            left: 0;
+            font-family: 'Monospace', monospace;
+        }
+
+        .fact-title {
+            color: #e5e7eb; /* Күміс негізгі түс */
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-12">
+
+    <header class="text-center mb-16">
+        <h1 class="text-7xl font-extrabold text-white mb-2 tracking-wider">
+            <!-- БАСТЫ ТАҚЫРЫП -->
+            <span class="neon-glow text-mercury-accent">МЕРКУРИЙ</span>
+        </h1>
+        <p class="text-2xl text-mercury-primary font-mono">Күн жүйесіндегі ең кішкентай: Ақпараттық Массив</p>
+    </header>
+
+    <main class="max-w-4xl mx-auto">
+        
+        <!-- Главная карточка Меркурий -->
+        <section class="p-8 md:p-12 bg-dark-slate card-border rounded-xl mb-12">
+            <div class="flex flex-col items-center justify-center mb-6">
+                
+                <!-- МЕРКУРИЙДІҢ ФОТОСЫ ОСЫ ЖЕРДЕ -->
+                <img 
+                    src="8.png"
+                    alt="Меркурий планетасының фотосы"
+                    class="w-60 h-60 rounded-full object-cover mb-4 border-2 border-mercury-accent shadow-xl shadow-mercury-accent/50"
+                    onerror="this.onerror=null; this.src='https://placehold.co/80x80/000000/a1a1aa?text=MERCURY%0A8.PNG'"
+                >
+                
+                <h2 class="text-4xl font-bold text-mercury-primary">Меркурий (Mercury)</h2>
+                <p class="text-lg text-slate-400 mt-2 font-mono">Күнге ең жақын планета: Системалық сипаттама</p>
+            </div>
+
+            <!-- Общая информация -->
+            <div class="text-lg leading-relaxed text-center mb-8 border-b border-gray-700 pb-6">
+                <p class="text-slate-200">
+                    Меркурий — Күн жүйесіндегі Күнге ең жақын және ең кішкентай планета. Оның беті Айға ұқсас <span class="text-mercury-accent font-bold">кратерлермен</span> (шұңқырлармен) жабылған және оның өте жұқа экзосферасы бар. Күнге жақын орналасуына байланысты, Меркурийдегі температура күндіз өте ыстық, ал түнде өте суық болады, бұл үлкен ауытқуды көрсетеді.
+                </p>
+            </div>
+
+            <!-- Интересные факты (Қызықты Деректер) -->
+            <h3 class="text-2xl font-semibold text-mercury-accent mb-6 neon-glow border-b border-mercury-accent pb-2">
+                Қызықты Деректер (DATA ARRAY)
+            </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-sm md:text-base">
+                
+                <div class="fact-item">
+                    <span class="fact-title">Кішкентай Планета:</span>
+                    Меркурий — Күн жүйесіндегі ең кішкентай планета, оның диаметрі <span class="text-mercury-primary">Айдан сәл ғана үлкен</span>.
+                </div>
+                
+                <div class="fact-item">
+                    <span class="fact-title">Үлкен Температура Айырмашылығы:</span>
+                    Күндіз температура <span class="text-mercury-accent">430 °C-қа</span> дейін көтерілсе, түнде <span class="text-mercury-accent">-180 °C-қа</span> дейін төмендейді.
+                </div>
+                
+                <div class="fact-item">
+                    <span class="fact-title">Қысқа Жыл:</span>
+                    Ол Күнді толық айналып шығу үшін тек <span class="text-mercury-primary">88 Жер тәулігі</span> қажет етеді.
+                </div>
+                
+                <div class="fact-item">
+                    <span class="fact-title">Әлсіз Магниттік Өріс:</span>
+                    Меркурийдің магниттік өрісі бар, бірақ оның күші Жердегіден <span class="text-mercury-accent">100 еседей</span> әлсіз.
+                </div>
+
+                <div class="fact-item">
+                    <span class="fact-title">Су Мұзы:</span>
+                    Сенерсіз, бірақ Меркурийдің кейбір <span class="text-mercury-primary">мәңгі көлеңкелі кратерлерінде</span> су мұзы болуы мүмкін.
+                </div>
+
+                <div class="fact-item">
+                    <span class="fact-title">Айналу/Орбита:</span>
+                    Оның айналу және Күнді айналу қатынасы 3:2. Яғни, ол Күнді екі рет айналған кезде, өз осінен үш рет айналып үлгереді.
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="text-center mt-auto p-4 text-slate-600 text-sm">
+        <p class="font-mono">
+            [ КОНЕЦ ПЕРЕДАЧИ ДАННЫХ ] | Кәсіби даму мақсатында жасалған.
+        </p>
+    </footer>
+
+</body>
+</html>
